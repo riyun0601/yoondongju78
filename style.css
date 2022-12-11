@@ -651,12 +651,13 @@ input[id="chkbox"]{
     left: 64vw;
     top: 66%;
     margin-top: 72px;
+    padding-right: 2vw;
     max-height: 0;
     overflow: auto;
     height: 56vh;
     opacity: 0;
 
-    width: 42vw;
+    width: 44vw;
 
     transition: all 0.5s;
 }
