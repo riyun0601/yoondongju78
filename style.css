@@ -580,6 +580,11 @@ nav {
     opacity: 25%;
 }
 
+.more img:hover {
+    transition: all 0.5s;
+    opacity: 70%;
+}
+
 .more a:first-child img{
     transform: rotate(180deg);
 }
