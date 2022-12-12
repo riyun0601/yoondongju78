@@ -26,9 +26,30 @@ nav {
     justify-content: space-between;
 
     width: 100vw;
-    height: 20vh;
+    height: 16vh;
 
     opacity: 100;
+    transition: all 0.3s;
+}
+
+nav:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 4px -4px #777;
+    height: 18vh;
+}
+
+var nav {
+    height: 18vh;
+    font-style: normal;
+}
+
+var nav:hover {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+span nav:hover {
+    background-color: #fff;
 }
 
 .logo var {
@@ -170,7 +191,7 @@ nav {
 }
 
 .menu_box a:nth-child(3) {
-    background-image: url("img/gallery.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("img/gallery.jpg");
 }
 
 .menu_box a:hover h2{
@@ -318,10 +339,10 @@ nav {
 .header a {
     text-decoration: none;
     letter-spacing: 0.1em;
-    color: #777777;
+    color: #C5C5C5;
 
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 14px;
 
     transform: scale(0.94);
@@ -398,7 +419,6 @@ nav {
 
 .book a{
     flex: 1 0 0;
-    min-width: 300px;
     transition: all 0.4s ease-in-out;
 
     color: white;
@@ -569,6 +589,7 @@ nav {
     left: 64vw;
     bottom: 20vh;
     transition: all 0.5s;
+    filter: invert(100);
 }
 
 .more img {
@@ -576,8 +597,8 @@ nav {
     width: 24px;
     margin-left: 48px;
     z-index: 0;
-    filter: invert(100);
-    opacity: 25%;
+    transition: all 0.3s;
+    opacity: 20%;
 }
 
 .more img:hover {
@@ -607,6 +628,11 @@ input[id="chkbox"]{
     right: 0;
     bottom: 12vh;
     transition: all 0.5s;
+}
+
+.title-area span:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 38vh;
 }
 
 .title-area span p {
@@ -666,13 +692,13 @@ input[id="chkbox"]{
     width: 8px;
   }
   .title-area var::-webkit-scrollbar-thumb {
-    background-color: #777777;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
     background-clip: padding-box;
-    border: 2px solid #777777;
+    border: 2px solid rgba(255, 255, 255, 0.1);
   }
   .title-area var::-webkit-scrollbar-track {
-    background-color: #333333;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
   }
 
@@ -687,6 +713,7 @@ input[id="chkbox"]:checked~.title-area span {
     height: 100vh;
     width: 50vw;
     bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 input[id="chkbox"]:checked~.title-area span h2 {
@@ -701,9 +728,10 @@ input[id="chkbox"]:checked~.title-area var {
     opacity: 100;
 }
 
-input[id="chkbox"]:checked~.more {
+input[id="chkbox"]:checked~.title-area .more {
     left: 50vw;
     bottom: 4vh;
+    opacity: 100;
 }
 
 input[id="chkbox"]:checked~.title-area span p {
@@ -719,9 +747,8 @@ input[id="chkbox"]:checked~.title-area span p {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-
-    padding: 128px 0;
     color: #FFFFFF;
+    padding-top: 64px;
 }
 
 .about {
@@ -777,23 +804,36 @@ input[id="chkbox"]:checked~.title-area span p {
     display: flex;
     flex-direction: column;
     flex: 1 0 0;
+
+    opacity: 50%;
+    transition: all 0.3s;
+}
+
+.about_box:hover {
+    opacity: 100%;
+}
+
+.about_box:hover img {
+    filter: blur(0px);
 }
 
 .about_box img {
     width: 20vw;
-    height: 54vh;
+    height: 56vh;
+    filter: blur(2px);
 }
 
 .about_box h3 {
-    font-size: 28px;
-    margin-top: 36px;
+    font-size: 20px;
+    margin-top: 28px;
+    color: #cccccc;
 }
 
 .about_box p {
-    margin-top: 20px;
-    font-size: 14px;
+    margin-top: 12px;
+    font-size: 16px;
     line-height: 32px;
-
+    color: #cccccc;
     margin-bottom: 80px;
 }
 
@@ -802,6 +842,7 @@ input[id="chkbox"]:checked~.title-area span p {
     flex-flow: column nowrap;
     align-items: center;
     width: 80vw;
+    padding-top: 14vh;
     display: flex;
     position: relative;
 }
@@ -825,45 +866,76 @@ input[id="chkbox"]:checked~.title-area span p {
     width: 50vw;
     padding-bottom: 48px;
     font-size: 16px;
-    line-height: 40px;
-    color: #FFFFFF;
-    text-align:justify
+    line-height: 36px;
+    color: #cccccc;
+    text-align: justify;
+    transition: all 0.3s;
 }
 
 .conB .profile .container {
     display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    position: absolute;
+    left: 0;
     gap: 0;
     flex-direction: column;
-    height: 168px;
-    margin-bottom: 248px;
+    width: auto;
 }
 
 .conB .profile img {
-    top: 36px;
-    position: absolute;
     width: 22vw;
     height: 22vw;
     object-fit: cover;
     border-radius: 11vw;
-    
+
+    margin-bottom: 24px;
+    transition: all 0.3s;
+}
+
+.conB .profile img:hover {
+    border-radius: 4vw;
+    transform: translateX(1vw);
 }
 
 .conB .profile h5 {
+    color: #cccccc;
     width: 50vw;
     font-size: 30px;
     line-height: 30px;
-    color: #ffffff;
     margin-top: 64px;
     margin-bottom: 28px;
+
+    transition: all 0.3s;
 }
 
 .conB .profile h2 {
     font-weight: 400;
     font-size: 18px;
     line-height: 18px;
-    padding-top: 80px;
     padding-bottom: 28px;
     color: #808080;
+}
+
+.conB .profile .container_1 {
+    opacity: 50%;
+    transition: all 0.3s;
+}
+
+.conB .profile .container_1 span{
+    transition: all 0.3s;
+}
+
+.conB .profile .container_1:hover {
+    opacity: 100%;
+}
+
+.conB .profile .container_1:hover span {
+    color: #ffffff;  
+}
+
+.conB .profile img:hover ~ p {
+    color: #777777;
 }
 
 
@@ -879,6 +951,7 @@ input[id="chkbox"]:checked~.title-area span p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 20vh;
     width: 70%;
 
     color: #222222;
@@ -887,13 +960,9 @@ input[id="chkbox"]:checked~.title-area span p {
 }
 
 .gallery h1 {
-    padding-top: 12px;
+    padding-top: 24px;
     font-size: 32px;
-    margin-bottom: 56px;
-}
-
-.gallery h1:first-child {
-    padding-top: 128px;
+    margin-bottom: 36px;
 }
 
 .gallery .con{
