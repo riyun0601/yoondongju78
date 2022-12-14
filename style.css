@@ -26,7 +26,7 @@ nav {
     justify-content: space-between;
 
     width: 100vw;
-    height: 16vh;
+    height: 100px;
 
     opacity: 100;
     transition: all 0.3s;
@@ -35,11 +35,11 @@ nav {
 nav:hover {
     background-color: rgba(0, 0, 0, 0.3);
     box-shadow: 0 4px 4px -4px #777;
-    height: 18vh;
+    height: 112px;
 }
 
 var nav {
-    height: 18vh;
+    height: 112px;
     font-style: normal;
 }
 
@@ -68,7 +68,7 @@ span nav:hover {
 }
 
 .logo img{
-    height: 12vh;
+    height: 72px;
 }
 
 .lnb {
@@ -79,6 +79,7 @@ span nav:hover {
     display: flex;
     justify-content: center;
     list-style: none;
+    font-size: 18px;
     line-height: 20px;
 }
 
@@ -225,8 +226,8 @@ span nav:hover {
     display: inline-block;
     z-index: 2;
     user-select: none;
-    width: 32px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     margin: 0;
   }
   
@@ -236,7 +237,7 @@ span nav:hover {
     height: 2px;
     position: relative;
     transition: background-color .2s ease-out;
-    width: 6vh;
+    width: 36px;
   }
   
   .burger-icon .burger-sticks::before,
@@ -251,11 +252,11 @@ span nav:hover {
   }
   
   .burger-icon .burger-sticks::before {
-    top: 2vh;
+    top: 12px;
   }
   
   .burger-icon .burger-sticks::after {
-    top: 4vh;
+    top: 24px;
   }
   
   .burger-check {
